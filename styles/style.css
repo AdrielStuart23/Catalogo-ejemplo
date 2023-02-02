@@ -21,6 +21,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.692);
     align-items: flex-start;
     position: fixed;
+    z-index: 2;
 }
 .img{
     width: 22%;
@@ -40,6 +41,7 @@ ul{
     display: flex;
     justify-content: space-around;
     align-self: center;
+    flex-wrap: wrap;
 }
 label img{
     width: 24px;
@@ -99,7 +101,67 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 1000px;
-    background-color: blue;
-    margin: 6.5% 0;
+    margin: 6.5% 0 0 0;
+    position: relative;
+    gap: 5px;
+
 }
+.cartelera{
+    width: 16.30%;
+    height: 300px;
+    position: relative;
+}
+.cartelera img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.contenido{
+    display: flex;
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    flex-direction: column;
+    top: 0px;
+    background-color: rgba(0, 162, 255, 0.336);
+    z-index: 1;
+    text-align: center;
+    visibility: hidden;
+}
+.contenido h1{
+    width: 100%;
+    font-size: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 130%;
+    text-align: center;
+    
+}
+.descri{
+    background-color: rgb(5, 167, 231);
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cartelera:hover > .contenido{
+    visibility: visible;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.valoracion{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    margin-top: -15%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.459);
+    height: 10%;
+    gap: 5px;
+    align-items: center;
+}
+.valoracion img{
+    width: 8%;
+    height: 19px;
+}
+
